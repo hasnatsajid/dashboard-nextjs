@@ -9,7 +9,6 @@ const Sidebar = () => {
   const [tables, setTables] = useState(true);
   const [components, setComponents] = useState(true);
   const router = useRouter();
-  console.log(router);
   const { pathname } = router;
 
   const toggleTables = () => {
@@ -23,7 +22,6 @@ const Sidebar = () => {
   };
 
   useEffect(() => {
-    console.log(pathname);
     if (pathname.includes('tables')) {
       setTables(false);
     }
