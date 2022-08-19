@@ -1,26 +1,18 @@
-import Avatar from './avatar'
-import DateFormatter from './date-formatter'
-import CoverImage from './cover-image'
-import Link from 'next/link'
-import type Author from '../interfaces/author'
+import Avatar from './avatar';
+import CoverImage from './cover-image';
+import Link from 'next/link';
+import type Author from '../interfaces/author';
 
 type Props = {
-  title: string
-  coverImage: string
-  date: string
-  excerpt: string
-  author: Author
-  slug: string
-}
+  title: string;
+  coverImage: string;
+  date: string;
+  excerpt: string;
+  author: Author;
+  slug: string;
+};
 
-const HeroPost = ({
-  title,
-  coverImage,
-  date,
-  excerpt,
-  author,
-  slug,
-}: Props) => {
+const HeroPost = ({ title, coverImage, date, excerpt, author, slug }: Props) => {
   return (
     <section>
       <div className="mb-8 md:mb-16">
@@ -33,9 +25,7 @@ const HeroPost = ({
               <a className="hover:underline">{title}</a>
             </Link>
           </h3>
-          <div className="mb-4 md:mb-0 text-lg">
-            <DateFormatter dateString={date} />
-          </div>
+          <div className="mb-4 md:mb-0 text-lg"></div>
         </div>
         <div>
           <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
@@ -43,7 +33,7 @@ const HeroPost = ({
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default HeroPost
+export default HeroPost;
